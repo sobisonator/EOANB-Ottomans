@@ -1259,6 +1259,10 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 				add_political_power = 75
+				country_event = {
+						#Implementation of the land code
+						id = OTO_focus.13
+				}
 		}
 
 	}
@@ -1272,6 +1276,13 @@ focus_tree = {
 		}
 		x = 24
 		y = 3
+		completion_reward = {
+			add_political_power = 75
+			country_event = {
+				#Reorganisation of the provinces - player gets a choice on how to reorganise them.
+				id = OTO_focus.14
+			}
+		}
 
 	}
 	focus = {
@@ -1284,6 +1295,10 @@ focus_tree = {
 		}
 		x = 26
 		y = 3
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = OTO_levantine_land_registration
+		}
 
 	}
 	focus = {

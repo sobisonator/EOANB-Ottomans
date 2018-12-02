@@ -278,6 +278,28 @@ ideas = {
 		}
 	}
 
+	country = {
+	OTO_sublime_porte_school = {
+			
+			allowed = {
+				tag = OTO
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_OTO_young_ottoman_constitution_signed
+			
+			modifier = {
+				political_power_gain = 0.25
+				research_time_factor = -0.05
+			}
+		}
+	}
+
 
 
 }
