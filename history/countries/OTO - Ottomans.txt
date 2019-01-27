@@ -27,6 +27,8 @@
     limited_equality
     absolutism
 
+    lp_land_estates
+
     human_rights
     no_elections
 
@@ -111,10 +113,10 @@
   # POLITICAL LEADERS
 
 create_country_leader = {
-  name = "Abdulmecid"
-  desc = "POLITICS_ABDULMECID_DESC"
-  picture = "Portrait_OTO_Abdulmecid_I.dds"
-  expire = "1861.6.1"
+  name = "Mustafa Resid"
+  desc = "POLITICS_MUSTAFA_RESID_DESC"
+  picture = "Portrait_OTO_Mustafa_Resid.dds"
+  expire = "1857.8.1"
   ideology = constit_monarch
   traits = {
 

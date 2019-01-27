@@ -816,6 +816,7 @@ focus_tree = {
 		x = 15
 		y = 2
 		completion_reward = {
+			#Change the law and order law
 			add_political_power = 50
 			add_popularity = {
 				ideology = autocracy
@@ -840,7 +841,9 @@ focus_tree = {
 		x = 14
 		y = 3
 		completion_reward = {
+			#Gradual increase in power towards fundamentalist
 			add_ideas = OTO_grand_mufti_empowered
+			#Possibility for event chain towards the Grand Mufti becoming de-facto head of government, replacing Grand Vizier or Prime-minister
 			country_event = OTO_focus.6
 		}
 		
@@ -857,6 +860,7 @@ focus_tree = {
 		x = 14
 		y = 4
 		completion_reward = {
+			#Decrease religious tolerance towards Christians and Jews
 			remove_ideas = OTO_tanzimat_reform
 		}
 		
@@ -876,6 +880,8 @@ focus_tree = {
 		x = 16
 		y = 3
 		completion_reward = {
+			#Decrease religious tolerance towards Shiite
+			#Increase cultural tolerance towards Arabs, Egyptians, Kurds and Persians
 			add_political_power = 150
 			add_war_support = 0.05
 			add_popularity = {
@@ -901,6 +907,7 @@ focus_tree = {
 		x = 16
 		y = 4
 		completion_reward = {
+			#Decrease religious tolerance towards Christians and Jews
 			remove_ideas = OTO_tanzimat_reform
 			add_stability = -0.1
 			add_political_power = -75
@@ -920,6 +927,8 @@ focus_tree = {
 		x = 11
 		y = 6
 		completion_reward = {
+			#Decrease cultural tolerance towards non-Turks
+			#Decreased social climbing for non-Turks, increased manpower.
 			add_ideas = OTO_devshirme
 			
 		}
@@ -940,6 +949,8 @@ focus_tree = {
 		x = 13
 		y = 6
 		completion_reward = {
+			#Decrease religious tolerance towards Christians
+			#Increase religious assimilation towards Sunni
 			add_popularity = {
 				ideology = fundamentalism
 				popularity = 0.05
@@ -986,6 +997,8 @@ focus_tree = {
 		x = 15
 		y = 6
 		completion_reward = {
+			#Increase religious tolerance towards Shiite
+			#Increase cultural tolerance towards Arabs, Egyptians and Persians
 			add_ideas = OTO_sublime_porte_school
 		}
 
@@ -1007,6 +1020,7 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			#Increase religious tolerance towards Christians and Jews
 			add_political_power = 150
 			add_stability = 0.01
 			
@@ -1067,6 +1081,7 @@ focus_tree = {
 		x = 18
 		y = 5
 		completion_reward = {
+			#Increase cultural tolerance towards Arabs
 			#Choose how to sponsor and trigger an event for the appropriate Arab countries
 			country_event = OTO_focus.8
 		}
@@ -1142,8 +1157,10 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 				country_event = {
-						#Cancel the Grand Vizier replacement events and remove the national ideas
+						#Cancel the Grand Vizier replacement system and remove the national ideas
 						id = OTO_focus.11
+						#Grand viziers will henceforth be elected by parliament.
+						set_country_flag = OTO_prime_minister_system
 				}
 		}
 
@@ -1218,6 +1235,7 @@ focus_tree = {
 		x = 19
 		y = 6
 		completion_reward = {
+				#Increase religious tolerance towards Christians and Jews
 				add_stability = 0.05
 				add_war_support = 0.05
 		}
@@ -1234,6 +1252,8 @@ focus_tree = {
 		x = 22
 		y = 7
 		completion_reward = {
+				#Increase cultural tolerance towards Greeks
+				#Increase religious tolerance towards Christians
 				#Will make it easier to core Greek areas (with culture mechanics)
 				set_country_flag = OTO_teaching_greek
 				reverse_add_opinion_modifier = {
@@ -1258,6 +1278,7 @@ focus_tree = {
 		x = 26
 		y = 2
 		completion_reward = {
+				#Increase religious tolerance towards Christians and Jews
 				add_political_power = 75
 				country_event = {
 						#Implementation of the land code
@@ -1296,8 +1317,15 @@ focus_tree = {
 		x = 26
 		y = 3
 		completion_reward = {
+			#Decrease cultural tolerance towards non-Turks
+			#Increas assimilation rate towards Turkish
 			add_political_power = 50
 			add_ideas = OTO_levantine_land_registration
+			country_event = {
+				#This forces many minorities in the Levant to be displaced from their land where they may have been
+				# indentured. It also displeases a large number of wealthy, if corrupt, landowners.
+				id = OTO_focus.141
+			}
 		}
 
 	}
@@ -1318,6 +1346,18 @@ focus_tree = {
 		historical_ai = {
 			always = no
 		}
+		completion_reward = {
+			#Decrease cultural tolerance towards non-Turks
+			add_political_power = 75
+			#####
+			#Idea limits purchase of land by foreign pops (yet to be implemented)
+			#add_ideas = OTO_restrict_foreign_land_ownership
+			####
+			news_event = {
+				#Seizure of foreign assets which violate new terms
+				id = OTO_focus.15
+			}
+		}
 
 	}
 	focus = {
@@ -1330,6 +1370,15 @@ focus_tree = {
 		}
 		x = 24
 		y = 5
+		completion_reward = {
+			#Decrease religious tolerance towards Christians and Jews
+			#Decrease cultural tolerance towards non-Turks
+			add_political_power = 25
+			####
+			#Limit foreign investment, add a bonus to local investment
+			#add_ideas = OTO_foreign_company_regulation
+			####
+		}
 
 	}
 	focus = {
@@ -1342,6 +1391,16 @@ focus_tree = {
 		}
 		x = 26
 		y = 6
+		completion_reward = {
+			#Add religious tolerance towards Christians and Jews
+			add_political_power = -50
+			#Emancipation of non-muslim minorities, allowing them to hold land.
+			add_ideas = OTO_emancipation_reform
+			news_event = {
+				#Good news for western Christian powers
+				id = OTO_focus.16
+			}
+		}
 
 	}
 	focus = {
@@ -1358,6 +1417,9 @@ focus_tree = {
 		}
 		x = 26
 		y = 7
+		completion_reward = {
+			#Add religious tolerance towards Christians and Jews
+		}
 
 	}
 	focus = {
